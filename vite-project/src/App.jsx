@@ -1,16 +1,24 @@
-import { useState } from "react";
+import { Component } from "react";
+import MainComponent from "./MainContent";
+import Shoppingcart from "./Shoppingcart";
+import Navbar from "./Navbar";
 
+class App extends Component {
+  
+  updateState = () => {
+    this.setState({
+      amount : '$100'
+    })
+  }
 
+  render() {
+    console.log("App Rendered")
 
-function App() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <div className="App">
-      <h1 className="text-5xl">HELLO!</h1>
-      
-    </div>
-  );
+    return(
+      <Shoppingcart/>
+    )
+  }
 }
 
 export default App;
+
