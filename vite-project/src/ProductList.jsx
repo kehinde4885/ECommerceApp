@@ -13,7 +13,7 @@ class Products extends Component {
 
           <div className="space-x-12">
             <button onClick ={() =>{this.props.Increment(index)}} className='p-5 bg-blue-500'>+</button>
-            <button className='p-5 bg-blue-500'>-</button>
+            <button onClick ={() =>{this.props.Decrement(index)}} className='p-5 bg-blue-500'>-</button>
           </div>
         </div>
       )

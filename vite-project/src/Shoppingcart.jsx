@@ -30,7 +30,9 @@ class Shoppingcart extends Component{
         return (
             <div>
                 <h1>Shopping Cart</h1>
-                <Products product = {this.state.products} Increment={this.handleIncrement}/>
+                <Products product = {this.state.products} 
+                Increment={this.handleIncrement}
+                Decrement={this.handleDecrement}/>
             </div>
         )
     }
@@ -40,6 +42,16 @@ class Shoppingcart extends Component{
         let productsArray = this.state.products
         let number = this.state.products[index].quantity
         number++
+        productsArray[index].quantity = number
+
+        this.setState(productsArray)
+    }
+
+    handleDecrement=(index) => {
+    
+        let productsArray = this.state.products
+        let number = this.state.products[index].quantity
+        number--
         productsArray[index].quantity = number
 
         this.setState(productsArray)
